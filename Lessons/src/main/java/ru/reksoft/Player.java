@@ -17,7 +17,19 @@ public class Player extends Person {
         return countGoal;
     }
 
-    public void setCountGoal(int countGoal) {
+    public void addGoal(int countGoal) {
         this.countGoal += countGoal;
+    }
+
+    public TypePlayer getTip() {
+        return tip;
+    }
+
+    public void setTip(TypePlayer tip) {
+        this.tip = tip;
+    }
+
+    public String getInfoPlayer (){
+        return fullName+" "+tip+(isActive == true? " активный" : " запасной")+" голов="+countGoal;
     }
 }

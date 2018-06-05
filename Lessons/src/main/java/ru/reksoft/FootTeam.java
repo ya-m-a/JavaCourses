@@ -21,12 +21,24 @@ public class FootTeam
                 this.activePlayerCount += 1;
             }
         }
+        else {System.out.println("В команде уже 20 игроков");}
+    }
+
+    public void delPlayer(Integer numPlayer, String fio) { //удаляем игрока по номеру или имени
+        if (numPlayer != null) {
+            this.team.remove(numPlayer.intValue());
+        }
+        else{
+          this.team.removeIf(player -> player.getFullName()==fio);
+        }
+
     }
 
     public void addCoach(Coach coach) {
-        if (this.trener != null){
+        if (this.trener == null){
             this.trener = coach;
         }
+        else {System.out.println("Тренер уже нанят");}
     }
 
 }
