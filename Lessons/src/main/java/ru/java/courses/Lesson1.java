@@ -1,7 +1,4 @@
-package ru.reksoft;
-
-import static ru.reksoft.Lesson4_FlowControl.task1;
-import static ru.reksoft.Lesson4_FlowControl.task2;
+package ru.java.courses;
 
 public class Lesson1 {
 
@@ -13,7 +10,7 @@ public class Lesson1 {
         System.out.println(spartak.name);
         System.out.println(spartak.team.get(0).fullName);
 */
-        System.out.println(task2(1, -10, '-'));
+        System.out.println(Lesson4_FlowControl.task2(1, -10, '-'));
         System.out.println(1-(-10));
 
     }
