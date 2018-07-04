@@ -26,6 +26,7 @@ public class Team
     }
 
     public void addPlayers(Player ... player) {
+
         for (Player oneplay : player) {
 
             if (this.team.size() < 20) {

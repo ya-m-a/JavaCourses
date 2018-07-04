@@ -2,8 +2,8 @@ package ru.java.courses.football;
 
 public class Person {
 
-    protected String fullName;
-    protected boolean isPlayer;
+    private String fullName;
+    private boolean isPlayer;
 
     public void setFullName(String fullName) {
         if (fullName == null || fullName=="") { throw new IllegalArgumentException("Невозможно создать человека без имени"); }

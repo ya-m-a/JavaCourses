@@ -22,9 +22,10 @@ public class Coach extends Person {
     }
 
     public Coach(String fullName) {
-        if (fullName == null || fullName=="") { throw new IllegalArgumentException("Невозможно создать тренера без имени");}
+        /*{ if (fullName == null || fullName=="") { throw new IllegalArgumentException("Невозможно создать тренера без имени");}
+*/
+        setFullName(fullName);
+        setPlayer(false);
 
-        this.fullName=fullName;
-        this.isPlayer = false;
     }
 }

@@ -11,8 +11,8 @@ public class Player extends Person {
         if (tip == null) { throw new IllegalArgumentException("Невозможно создать игрока с пустой ролью"); }
         if (fullName == null || fullName=="") { throw new IllegalArgumentException("Невозможно создать игрока без имени"); }
 
-        this.fullName=fullName;
-        this.isPlayer = true;
+        setFullName(fullName);
+        setPlayer(true);
         this.active = isActive;
         this.role = tip;
     }
@@ -20,10 +20,10 @@ public class Player extends Person {
     public Player(String fullName, PlayerRole tip) {
 
         if (tip == null) { throw new IllegalArgumentException("Невозможно создать игрока с пустой ролью"); }
-        if (fullName == null || fullName=="") { throw new IllegalArgumentException("Невозможно создать игрока без имени"); }
+        //if (fullName == null || fullName=="") { throw new IllegalArgumentException("Невозможно создать игрока без имени"); }
 
-        this.fullName=fullName;
-        this.isPlayer = true;
+        setFullName(fullName);
+        setPlayer(true);
         this.active = true;
         this.role = tip;
     }
@@ -63,6 +63,6 @@ public class Player extends Person {
     }
 
     public String getInfoPlayer (){
-        return fullName+" "+role+(active == true? " активный" : " запасной")+" голов="+countGoal;
+        return  getName()+" "+role+(active == true? " активный" : " запасной")+" голов="+countGoal;
     }
 }
